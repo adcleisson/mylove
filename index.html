@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nossa História de Amor</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    header {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      color: #d4af37;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .texto-homenagem {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 177.78%; /* proporção 9:16 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 50px;
+    }
+
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .momentos {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .momento {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .momento:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .momento img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    }
+
+    .legenda {
+      flex: 1;
+      margin: 20px;
+      font-size: 1rem;
+      color: #e0e0e0;
+      border-left: 4px solid #d4af37;
+      padding-left: 15px;
+    }
+
+    .legenda h3 {
+      margin: 0 0 10px;
+      color: #d4af37;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #000;
+      color: #d4af37;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .momento {
+        flex-direction: column !important;
+        text-align: center;
+      }
+
+      .legenda {
+        border-left: none;
+        border-top: 4px solid #d4af37;
+        padding-left: 0;
+        padding-top: 10px;
+        margin: 10px 0 0;
+      }
+    }
+
+    /* Botão para tocar música */
+    #btn-musica {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #d4af37;
+      border: none;
+      color: #000;
+      padding: 12px 18px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(212, 175, 55, 0.7);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+      user-select: none;
+    }
+
+    #btn-musica:hover {
+      background: #b9922f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nossa História de Amor</h1>
+  </header>
+
+  <div class="container">
+    <div class="texto-homenagem">
+      <p>
+        Cada passo ao seu lado é uma nova lembrança que guardo com amor. <br />
+        Que este momento seja mais um capítulo da nossa linda história.
+      </p>
+    </div>
+
+    <div class="video-wrapper">
+      <video controls loop playsinline>
+        <source src="seu_video.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeos HTML5.
+      </video>
+    </div>
+
+    <div class="momentos">
+      <div class="momento">
+        <img src="fotos/foto1.jpg" alt="Foto 1" />
+        <div class="legenda">
+          <h3>Nosso Primeiro Encontro</h3>
+          <p>O dia em que tudo começou. Um olhar, um sorriso, e o início de tudo.</p>
+        </div>
+      </div>
+
+      <div class="momento">
+        <img src="fotos/foto2.jpg" alt="Foto 2" />
+        <div class="legenda">
+          <h3>Viagem dos Sonhos</h3>
+          <p>Exploramos juntos novos caminhos e criamos memórias inesquecíveis.</p>
+        </div>
+      </div>
+
+      <div class="momento">
+        <img src="fotos/foto3.jpg" alt="Foto 3" />
+        <div class="legenda">
+          <h3>Dia Especial</h3>
+          <p>Celebramos o amor, cercados por pessoas queridas e sorrisos sinceros.</p>
+        </div>
+      </div>
+
+      <div class="momento">
+        <img src="fotos/foto4.jpg" alt="Foto 4" />
+        <div class="legenda">
+          <h3>Simples e Perfeito</h3>
+          <p>Na rotina, encontramos alegria e afeto nos pequenos gestos.</p>
+        </div>
+      </div>
+
+      <div class="momento">
+        <img src="fotos/foto5.jpg" alt="Foto 5" />
+        <div class="legenda">
+          <h3>Contando os Dias</h3>
+          <p>A expectativa pelo nosso grande dia, com o coração cheio de amor.</p>
+        </div>
+      </div>
+
+      <div class="momento">
+        <img src="fotos/foto6.jpg" alt="Foto 6" />
+        <div class="legenda">
+          <h3>Juntos Para Sempre</h3>
+          <p>O futuro é promissor, e com você ao meu lado, ele é ainda mais especial.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Feito com ❤️ para eternizar nosso amor.
+  </footer>
+
+  <!-- Música de fundo -->
+  <audio id="musica-fundo" src="musica_fundo.mp3" loop></audio>
+
+  <!-- Botão para ativar música -->
+  <button id="btn-musica">Tocar Música 🎵</button>
+
+  <script>
+    const audio = document.getElementById('musica-fundo');
+    const btn = document.getElementById('btn-musica');
+
+    btn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.volume = 0.1;
+        audio.play();
+        btn.textContent = 'Pausar Música ⏸️';
+      } else {
+        audio.pause();
+        btn.textContent = 'Tocar Música 🎵';
+      }
+    });
+  </script>
+</body>
+</html>
